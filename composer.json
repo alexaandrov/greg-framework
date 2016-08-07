@@ -1,0 +1,22 @@
+{
+    "name": "greg/mark",
+    "description": "A framework for study php",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Grigory Alexandrov",
+            "email": "alexaandrov@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "5.5.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "mark\\": ""
+        }
+    }
+}

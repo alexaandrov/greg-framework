@@ -16,7 +16,7 @@ nbproject
 # windows thumbnail cache
 Thumbs.db
 desktop.ini
-debug.log
+debug.logf
 
 # composer itself is not needed
 composer.phar
@@ -30,3 +30,5 @@ phpunit.phar
 # local phpunit config
 phpunit.xml
 .phpintel
+
+/vendor/
