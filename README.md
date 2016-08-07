@@ -1,2 +1,2 @@
 #MARK - PHP Framework
-## A PHP framework for study
+## Framework for study PHP language
