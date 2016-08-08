@@ -1,2 +1,2 @@
-#MARK - PHP Framework
+#GREG - PHP Framework
 ## Framework for study PHP language
