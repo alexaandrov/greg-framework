@@ -2,6 +2,7 @@
 namespace mark\core;
 
 use PDO;
+use mark\core\exceptions\DbException;
 
 /**
  * Class Db which used to connect and make query to the database.
@@ -20,13 +21,14 @@ class Db
      * @param string $dbname
      * @param string $username
      * @param string $password
+     * @throws DbException
      */
     public function __construct(string $host, string $dbname, string $username, string $password)
     {
         try {
             $this->connection = new PDO('mysql:dbname=' . $dbname . ';host=' . $host, $username, $password);
         } catch (\PDOException $e) {
-            echo $e->getMessage();
+            throw new DbException('The connection is not established.');
         }
     }
 
@@ -49,12 +51,13 @@ class Db
      * @param string $sql
      * @param array $input_params default empty array
      * @return array
+     * @throws DbException
      */
     public function query(string $sql, array $input_params = [])
     {
         $sth = $this->connection->prepare($sql);
         if (!$sth->execute($input_params)) {
-            throw new \PDOException;
+            throw new DbException('Database query error.');
         } else {
             return $sth->fetchAll();
         }
