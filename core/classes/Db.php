@@ -1,9 +1,4 @@
 <?php
-/**
- * @author Grigory Alexandrov
- * @link https://github.com/alexaandrov
- */
-
 namespace mark\core\classes;
 
 use PDO;
@@ -11,6 +6,9 @@ use mark\core\exceptions\DbException;
 
 /**
  * Class Db which used to connect and make query to the database.
+ *
+ * @author Grigory Alexandrov
+ * @link https://github.com/alexaandrov
  */
 class Db
 {

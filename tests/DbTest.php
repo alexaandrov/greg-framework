@@ -1,13 +1,14 @@
 <?php
-/**
- * @author Grigory Alexandrov
- * @link https://github.com/alexaandrov
- */
-
 namespace mark\tests;
 
 use mark\core\classes\Db;
 
+/**
+ * Class DbTest.
+ *
+ * @author Grigory Alexandrov <alexaandrovp@gmail.com>
+ * @link https://github.com/alexaandrov
+ */
 class DbTest extends \PHPUnit_Framework_TestCase
 {
     // TODO: Add test for query with class
