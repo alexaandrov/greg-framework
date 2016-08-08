@@ -33,7 +33,7 @@ class Db
     }
 
     /**
-     * Execute a prepared statement
+     * Execute a prepared statement.
      *
      * @param string $sql
      * @param array $input_params default empty array
@@ -46,20 +46,24 @@ class Db
     }
 
     /**
-     * If execute true, return array
+     * Execute query to the data and return data array or array of the objects.
      *
      * @param string $sql
-     * @param array $input_params default empty array
+     * @param array $input_params
+     * @param string $class
      * @return array
      * @throws DbException
      */
-    public function query(string $sql, array $input_params = [])
+    public function query(string $sql, array $input_params = [], string $class = null)
     {
         $sth = $this->connection->prepare($sql);
         if (!$sth->execute($input_params)) {
             throw new DbException('Database query error.');
-        } else {
+        }
+        if (empty($class)) {
             return $sth->fetchAll();
+        } else {
+            return $sth->fetchAll(PDO::FETCH_CLASS, $class);
         }
     }
 }
