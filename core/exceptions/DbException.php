@@ -1,4 +1,4 @@
 <?php
-namespace core\exceptions;
+namespace mark\core\exceptions;
 
 class DbException extends \Exception {}
