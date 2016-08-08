@@ -1,10 +1,11 @@
 <?php
 namespace mark\tests;
 
-use mark\core\Db;
+use mark\core\classes\Db;
 
 class DbTest extends \PHPUnit_Framework_TestCase
 {
+    // TODO: Add test for query with class
     public function testExecuteWithoutParams()
     {
         $db = new Db('localhost', 'mark', 'root', '');
@@ -26,7 +27,6 @@ class DbTest extends \PHPUnit_Framework_TestCase
         $sql = 'SELECT id FROM news';
         $this->assertEquals(true, !empty($db->query($sql)));
     }
-
     public function testQueryWithParams()
     {
         $db = new Db('localhost', 'mark', 'root', '');
