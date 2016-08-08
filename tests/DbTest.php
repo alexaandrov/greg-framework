@@ -1,4 +1,9 @@
 <?php
+/**
+ * @author Grigory Alexandrov
+ * @link https://github.com/alexaandrov
+ */
+
 namespace mark\tests;
 
 use mark\core\classes\Db;
