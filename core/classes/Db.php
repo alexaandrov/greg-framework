@@ -1,5 +1,5 @@
 <?php
-namespace mark\core;
+namespace mark\core\classes;
 
 use PDO;
 use mark\core\exceptions\DbException;
