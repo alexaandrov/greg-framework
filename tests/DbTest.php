@@ -26,7 +26,7 @@ class DbTest extends \PHPUnit_Framework_TestCase
         $sql = 'SELECT id FROM news';
         $this->assertEquals(true, !empty($db->query($sql)));
     }
-    
+
     public function testQueryWithParams()
     {
         $db = new Db('localhost', 'mark', 'root', '');
