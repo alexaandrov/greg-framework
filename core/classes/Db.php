@@ -1,8 +1,8 @@
 <?php
-namespace mark\core\classes;
+namespace meepo\core\classes;
 
 use PDO;
-use mark\core\exceptions\DbException;
+use meepo\core\exceptions\DbException;
 
 /**
  * Class Db which used to connect and make query to the database.

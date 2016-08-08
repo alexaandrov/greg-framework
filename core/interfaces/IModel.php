@@ -1,5 +1,5 @@
 <?php
-namespace mark\core\interfaces;
+namespace meepo\core\interfaces;
 
 /**
  * Interface IModel.

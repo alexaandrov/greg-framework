@@ -1,7 +1,7 @@
 <?php
-namespace mark\tests;
+namespace meepo\tests;
 
-use mark\core\classes\Db;
+use meepo\core\classes\Db;
 
 /**
  * Class DbTest.

@@ -1,5 +1,5 @@
 {
-    "name": "greg/mark",
+    "name": "alexaandrov/meepo",
     "description": "A framework for study php",
     "type": "project",
     "license": "MIT",
@@ -16,7 +16,7 @@
     },
     "autoload": {
         "psr-4": {
-            "mark\\": ""
+            "meepo\\": ""
         }
     }
 }

@@ -1,5 +1,5 @@
 <?php
-namespace mark\core\exceptions;
+namespace meepo\core\exceptions;
 
 class DbException extends \Exception
 {
