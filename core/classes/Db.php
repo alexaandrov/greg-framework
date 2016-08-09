@@ -5,7 +5,7 @@ use PDO;
 use meepo\core\exceptions\DbException;
 
 /**
- * Class Db which used to connect and make query to the database.
+ * Class Db, which is used to connect and query the database.
  *
  * @author Grigory Alexandrov
  * @link https://github.com/alexaandrov
