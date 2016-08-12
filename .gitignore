@@ -36,4 +36,6 @@ phpunit.xml
 
 /vendor/
 
+# dev branch exceptions
 /test.php
+/app
