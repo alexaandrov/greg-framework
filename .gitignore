@@ -35,3 +35,5 @@ phpunit.xml
 *.todo
 
 /vendor/
+
+/test.php
