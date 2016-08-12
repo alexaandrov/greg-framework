@@ -39,3 +39,4 @@ phpunit.xml
 # dev branch exceptions
 /test.php
 /app
+/autoload.php
