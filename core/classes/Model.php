@@ -1,5 +1,5 @@
 <?php
-namespace core\classes;
+namespace meepo\core\classes;
 
 /**
  * Basic model
@@ -9,6 +9,19 @@ namespace core\classes;
  */
 abstract class Model
 {
+    /**
+     * Database instance.
+     * @var Db
+     */
+    private $db;
+
+    /**
+     * Model constructor.
+     */
+    public function __construct()
+    {
+        $this->db = new Db('localhost', 'php2.local', 'root', '');
+    }
 
     /**
      * Find all notes in the database.
@@ -16,17 +29,28 @@ abstract class Model
      */
     public function findAll()
     {
-        // TODO: Implement findAll() method.
+        return $this->db->query(
+            'SELECT * FROM '
+            . static::TABLE,
+            [],
+            static::class
+        );
     }
 
     /**
      * Find notes by id in the database.
-     * @param $value
+     * @param $id
      * @return mixed
      */
-    public function findByPk($value)
+    public function findById($id)
     {
-        // TODO: Implement findById() method.
+        return $this->db->query(
+            'SELECT * FROM  '
+            . static::TABLE
+            . ' WHERE id = :id',
+            [':id' => $id],
+            static::class
+        );
     }
 
     /**
